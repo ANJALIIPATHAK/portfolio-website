@@ -9,6 +9,9 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
+const contactRoutes = require("./routes/contactRoutes");
+app.use("/api/contact", contactRoutes);
+
 app.get("/", (req, res) => {
   res.send("Portfolio backend is running 🚀");
 });
